@@ -1,0 +1,19 @@
+<html>
+    <link type="text/css" rel="stylesheet" href="/static/style.css" />
+    <body>
+    {% if result %}
+        {% for record in result %}
+
+            <h1> {{ record }}</h1>
+            <h3>
+                
+                {% for field in result[record] %}
+                    {{ field }} ,
+                {% endfor %}
+
+        {% endfor %}
+    {% else %}
+        <h1> There was no result</h1>
+        {% endif %}
+    </body>
+</html>
