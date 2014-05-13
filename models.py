@@ -6,6 +6,9 @@ import re
 from urlparse import urlparse
 from lxml import etree
 class Wishlist(object):
+    """Class representing an Amazon wishlist.
+
+    """
     def __init__(self, email=""):
         self.email = email
         self.url = self.get_url(email)
